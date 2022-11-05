@@ -1,0 +1,12 @@
+extends layout 
+
+block content
+ .container  
+  header.form-header 
+   h1 Share your thoughts
+  main.form-container 
+   form(action="/new", method="post") 
+    input.inputs(type="text" placeholder="Author" name='author' required )
+    label(for="msgText")
+    textarea.inputs(name="msgText", cols="30", rows="10" required placeholder="type here a new message")
+    input.btn(type="submit", value="post" )  

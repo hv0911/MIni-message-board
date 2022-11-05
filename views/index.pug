@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div
+   h1= title
+   a(href=`http://localhost:3000/new` ) Type new Message
+   div.container
+    each message in  messages
+     div
+       h3='author: ' + message.user 
+       p='message: ' + message.text 
+       p='added at: ' + message.added 
+
